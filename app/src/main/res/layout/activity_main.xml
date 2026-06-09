@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_main.xml -->
+<!-- Layout principal con contenedor de Fragments y navegación inferior -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Contenedor donde se cargan los Fragments -->
+    <!-- FrameLayout es el contenedor más simple: apila vistas una sobre otra -->
+    <!-- layout_weight="1" hace que ocupe todo el espacio disponible -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Barra de navegación inferior -->
+    <!-- BottomNavigationView muestra las pestañas definidas en bottom_menu.xml -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_menu"
+        app:labelVisibilityMode="labeled" />
+    <!-- labelVisibilityMode="labeled" muestra siempre el texto debajo del ícono -->
+
+</LinearLayout>
